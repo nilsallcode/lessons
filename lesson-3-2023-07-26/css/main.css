@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+}
+
+.main-text {
+    color: red;
+    font-size: 20px;
+    background-color: green;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    border: 25px solid blue;
+
+    margin: 100px;
+
+    text-align: center;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+span {
+    font-weight: 900;
+}
+
+.text-block h2 {
+    display: inline;
+}
+
+.text-block p {
+    display: inline;
+}
+
+.link {
+    color: #000;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+nav {
+    background-color: #001f3f;
+    padding: 15px;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    text-decoration: none;
+    margin-left: 13px;
+    color: white;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #eee;
+    padding: 100px;
+    text-align: center;
+}
+
+.button {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+}
+
+.button:hover {
+    background-color: #444;
+}
+
+.contact-form {
+    padding: 50px 150px 50px 150px;
+}
+
+input {
+    background-color: #333;
+    outline: none;
+    color: white;
+    padding: 15px;
+    border: 0px;
+    margin-top: 10px;
+    width: 250px;
+    font-size: 20px;
+}
+
+.bg-green {
+    background-color: green;
+}
