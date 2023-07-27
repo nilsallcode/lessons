@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 70px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: navy;
+    padding: 20px;
+    z-index: 1;
+}
+
+.navigation-flex-container {
+    display: flex;
+}
+
+.navigation-flex-container > div {
+    padding: 10px;
+}
+
+.navigation-flex-container > div > a {
+    color: #fff;
+    text-decoration: none;
+    transition: 2s;
+}
+
+.navigation-flex-container > div > a:hover {
+    color: #777;
+}
+
+.flex-container {
+    display: flex;
+    background-color: green;
+    padding: 20px;
+    justify-content: center;
+    flex-direction: row;
+    height: 500px;
+    align-items: center;
+}
+
+.flex-container > .flex-item {
+    background-color: yellow;
+    padding: 10px;
+    margin: 10px;
+    height: 20px;
+}
+
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+.order-3 {
+    order: 3;
+}
+
+.grid-item-header {
+    grid-area: header;
+}
+
+.grid-item-menu {
+    grid-area: menu;
+}
+
+.grid-item-left {
+    grid-area: left;
+}
+
+.grid-item-right {
+    grid-area: right;
+}
+
+.grid-item-footer {
+    grid-area: footer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'menu left left left right right'
+        'menu footer footer footer footer footer';
+    gap: 15px;
+    background-color: aqua;
+    padding: 50px;
+}
+
+.grid-container > div {
+    background-color: red;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.cat-image {
+    top: 100px;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 60px;
+    color: #fff;
+}
+
+.container > .item > p {
+    font-size: 60px;
+    transition: 0.1s;
+}
+
+.container > .item > p:hover {
+    background: red;
+    font-size: 120px;
+    color: blue;
+}
