@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body>
+    
+    <!-- PART 1 -->
+
+    <div class="grid grid-cols-4">
+        <div class="flex flex-col text-center items-center justify-center bg-green-500 h-[250px]">
+            <h1 class="text-2xl text-white">Test</h1>
+            <p class="text-white">
+                Some random text
+            </p>
+        </div>
+        <div class="flex flex-col text-center items-center justify-center bg-red-500 h-[250px]">
+            <h1 class="text-2xl text-white">Test</h1>
+            <p class="text-white">
+                Some random text
+            </p>
+        </div>
+        <div class="flex flex-col text-center items-center justify-center bg-blue-500 h-[250px]">
+            <h1 class="text-2xl text-white">Test</h1>
+            <p class="text-white">
+                Some random text
+            </p>
+        </div>
+        <div class="flex flex-col text-center items-center justify-center bg-yellow-500 h-[250px]">
+            <h1 class="text-2xl text-white">Test</h1>
+            <p class="text-white">
+                Some random text
+            </p>
+        </div>
+    </div>
+
+    <!-- PART 2 -->
+
+    <nav class="grid grid-cols-1 md:grid-cols-2 bg-red-500 p-8 fixed w-screen top-0">
+        <div>
+            <h1 class="text-white text-xl">Gotham FC</h1>
+        </div>
+        <div class="flex flex-col md:flex-row mt-4 md:mt-0 justify-end text-white gap-4">
+            <a href="" class="hover:text-gray-200">Home</a>
+            <a href="" class="hover:text-gray-200">Tickets</a>
+            <a href="" class="hover:text-gray-200">About</a>
+            <a href="" class="hover:text-gray-200">Contact</a>
+        </div>
+    </nav>
+
+    <header class="flex justify-center items-center bg-gray-200 h-[500px] mt-16">
+        <h1 class="text-6xl">We're by far the greatest team!</h1>
+    </header>
+
+</body>
+</html>
