@@ -46,7 +46,7 @@ console.log(4 / 2);
 
 let fruits = ['Apple', 'Banana', 'Pear', 'Orange'];
 
-console.log(fruits);
+console.log(fruits[0]);
 
 fruits.splice(3, 1);
 
