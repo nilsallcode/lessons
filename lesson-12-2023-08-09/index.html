@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/banner.jpeg">
+            <div class="overlay"></div>
+            <div class="banner-content">
+                <h1>Playlist</h1>
+                <p>
+                    Browse our library of songs and play them directly in the app.
+                </p>
+            </div>
+        </header>
+        <main>
+            
+            <div class="search-box">
+                <input id="search-input" type="text" placeholder="Search a song ...">
+            </div>
+    
+            <div class="playlist">
+                <div id="song">
+                    <p class="song-order">
+                        1
+                    </p>
+                    <img class="play-icon" src="./images/play-button.png" alt="">
+                    <p class="song-details">
+                        Style <span class="artist">Taylor Swift</span>
+                    </p>
+                </div>
+                <div id="song">
+                    <p class="song-order">
+                        2
+                    </p>
+                    <img class="play-icon" src="./images/play-button.png" alt="">
+                    <p class="song-details">
+                        Counting Stars <span class="artist">OneRepublic</span>
+                    </p>
+                </div>
+                <div id="song">
+                    <p class="song-order">
+                        3
+                    </p>
+                    <img class="play-icon" src="./images/play-button.png" alt="">
+                    <p class="song-details">
+                        Sorry <span class="artist">Justin Bieber</span>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer id="player">
+        <div class="song-details">
+            <p id="song-name">
+                Style
+            </p>
+            <p id="song-artist">
+                Taylor Swift
+            </p>
+        </div>
+        <div id="play-button">
+            <img class="play-icon" src="./images/play-button.png" alt="">
+        </div>
+        <div id="slider"></div>
+        <div id="time">
+            1:23
+        </div>
+    </footer>
+</body>
+</html>

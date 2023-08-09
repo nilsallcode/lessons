@@ -1,0 +1,168 @@
+body {
+    background-color: #212121;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.container {
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+header {
+    display: flex;
+    position: relative;
+    height: 25rem;
+    align-items: flex-end;
+}
+
+header > img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    position: absolute;
+    z-index: -10;
+}
+
+header > .overlay {
+    height: 25rem;
+    width: 100%;
+    background-color: rgb(18, 18, 18, 0.5);
+    position: absolute;
+    z-index: -5;
+}
+
+header > .banner-content {
+    margin-bottom: 2.5rem;
+    margin-left: 2.5rem; 
+}
+
+header > .banner-content > h1 {
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.search-box > #search-input {
+    background-color: #121212;
+    color: #fff;
+    width: 100%;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0;
+    padding-left: 0;
+    outline: none;
+    font-size: 20px;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 1rem;
+}
+
+.playlist > #song {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #333;
+}
+
+.playlist > #song:hover {
+    background-color: #444
+}
+
+.playlist > #song > .song-order {
+    font-size: 20px;
+    margin-left: 15px;
+} 
+
+.playlist > #song > .play-icon {
+
+    width: 35px;
+    height: 35px;
+
+}
+
+.playlist > #song > .song-details {
+
+    font-size: 20px;
+
+}
+
+.playlist > #song > .song-details > .artist {
+    font-size: 15px;
+    color: #999;
+    margin-left: 0.5rem;
+}
+
+#player {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2rem;
+    background-color: #111;
+}
+
+#player > .song-details > #song-artist {
+    font-size: 15px;
+    color: #999;
+}
+
+#player > #play-button > .play-icon {
+    width: 55px;
+    height: 55px;
+}
+
+#player > #slider {
+    height: 5px;
+    width: 75rem;
+    background-color: #1DB954;
+}
+
+@media only screen and (max-width: 850px) {
+    
+    .container {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .container {
+        margin: 0;
+    }
+
+    header {
+        height: 10rem;
+    }
+
+    header > img {
+        height: 10rem;
+    }
+
+    header > .overlay {
+        height: 10rem;
+    }
+
+    header > .banner-content {
+        margin: 1rem;
+    }   
+
+    header > .banner-content > h1 {
+        font-size: 35px;
+    }
+
+}
