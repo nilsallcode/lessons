@@ -31,3 +31,7 @@
 14. Write a JavaScript program to find the number appearing most frequently in a given array of integers.
 
 15. Write a JavaScript program to sort the strings of a given array of strings in order of increasing length.  Note: Do not change the order if the lengths of two strings are the same.
+
+## extra operator note
+
+https://www.scaler.com/topics/javascript/difference-between-double-equals-and-triple-equals-in-javascript/
