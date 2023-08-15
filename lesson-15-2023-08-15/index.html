@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM exercises</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            background: green;
+            color: white;
+            padding: 15px;
+        }
+
+        .navbar-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-button {
+            border: none;
+            background: blue;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .task-content {
+            width: 15%;
+            margin: 5rem;
+        }
+
+        .task-button {
+            background: cyan;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar {
+            position: relative;
+            height: 30px;
+            background: #999;
+        }
+
+        .progress-bar-filled {
+            height: 30px;
+            background: orange;
+            width: 0%;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Write a JavaScript program to create a dropdown menu that shows and hides its options
+        when clicked. -->
+
+    <nav class="navbar">
+        <div class="navbar-info">
+            <div class="title">
+                <h3>Company Name</h3>
+            </div>
+            <div>
+                <button class="menu-button">
+                    Menu
+                </button>
+            </div>
+        </div>
+        <div class="navbar-items hidden">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Write a JavaScript program that adds rows to an empty table. -->
+
+    <ul class="list"></ul>
+
+    <!-- Write a JavaScript program to create a progress bar that updates its width based on task completion. -->
+
+    <div class="task-content">
+        <button class="task-button">
+            Run Task
+        </button>
+        
+        <p>
+            <span class="completed-tasks">0</span>/<span class="total-tasks">0</span> tasks complete
+        </p>
+        <div class="progress-bar">
+            <div class="progress-bar-filled"></div>
+        </div>
+    </div>
+
+    <script>
+
+        const menuButton = document.querySelector(".menu-button");
+        const navItems = document.querySelector(".navbar-items");
+        let menuOpen = false;
+
+        menuButton.addEventListener("click", () => {
+
+            if (!menuOpen) {
+
+                navItems.classList.remove("hidden");
+                menuOpen = true;
+
+            } else {
+
+                navItems.classList.add("hidden");
+                menuOpen = false;
+
+            }
+
+        });
+
+        const list = document.querySelector(".list");
+        const shoppingList = [
+            "Apples",
+            "Bread",
+            "Milk",
+            "Candy"
+        ];
+
+        window.addEventListener("load", () => {
+            
+            for (let i = 0; i < shoppingList.length; i++) {
+                let newItem = document.createElement("li");
+                newItem.innerHTML = shoppingList[i];
+                list.appendChild(newItem);
+            }
+
+        });
+
+        const taskButton = document.querySelector(".task-button");
+        const completedTasksText = document.querySelector(".completed-tasks");
+        const totalTasksText = document.querySelector(".total-tasks");
+        const progress = document.querySelector(".progress-bar-filled");
+
+        let totalTasks = 13;
+        let completedTasks = 0;
+
+        window.addEventListener("load", () => {
+
+            totalTasksText.innerHTML = totalTasks;
+
+            taskButton.addEventListener("click", () => {
+
+                if (!(completedTasks >= totalTasks)) {
+                    completedTasks++;
+                    completedTasksText.innerHTML = completedTasks;
+
+                    progress.style.width = (completedTasks / totalTasks * 100) + "%";
+
+                }
+
+            });
+
+        });
+
+
+    </script>
+</body>
+</html>
