@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        button {
+            background: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="slideshow">
+        <img alt="">
+        <br>
+        <button class="previous-button">
+            Previous
+        </button>
+        <button class="next-button">
+            Next
+        </button>
+    </div>
+
+    <script>
+
+        const images = [
+            "images/morning.jpeg",
+            "images/noon.jpeg",
+            "images/night.jpeg"
+        ];
+
+        let currentImage = 0;
+
+        const image = document.querySelector("img");
+        image.src = images[0];
+
+        const previousButton = document.querySelector(".previous-button");
+        const nextButton = document.querySelector(".next-button");
+
+        nextButton.addEventListener("click", () => {
+
+            if (!(currentImage >= (images.length - 1))) {
+                currentImage = currentImage + 1;
+            } else {
+                currentImage = 0;
+            }
+
+            image.src = images[currentImage];
+
+        });
+
+        previousButton.addEventListener("click", () => {
+
+            if (currentImage !== 0) {
+                currentImage = currentImage - 1;
+            } else {
+                currentImage = images.length - 1;
+            }
+
+            image.src = images[currentImage];
+
+        });
+
+    </script>
+</body>
+</html>
