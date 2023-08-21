@@ -1,0 +1,28 @@
+.header {
+  margin-bottom: 25px;
+}
+
+.header > input {
+  padding: 9px;
+  outline: none;
+}
+
+.main-button {
+  background-color: red;
+  color: white;
+  border: border;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.todo-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  background: #eee;
+  padding: 10px;
+}
