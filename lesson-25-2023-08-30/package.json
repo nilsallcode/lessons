@@ -1,0 +1,17 @@
+{
+  "name": "lesson-25-2023-08-30",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.2.0",
+    "express": "^4.18.2",
+    "prisma": "^5.2.0"
+  }
+}
