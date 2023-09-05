@@ -33,14 +33,6 @@ function App() {
 
 **Task:** Implement a `InteractionsContext` to track the number of user profiles visited by the current user. On the main users list page, show the count of profiles visited.
 
-```jsx
-const InteractionsContext = React.createContext();
-
-function App() {
-  // Wrap your components with InteractionsContext.Provider
-}
-```
-
 **Requirements:**
 - Every time a user navigates to a `UserProfile`, increment the count in the `InteractionsContext`.
 - Display the count of visited profiles on the main `UsersList` page.
