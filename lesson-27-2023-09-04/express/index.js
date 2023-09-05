@@ -51,6 +51,24 @@ app.post('/add-country', async (req, res) => {
 
 });
 
+app.patch('/update-country/:countryId', async (req, res) => {
+
+    const countryId = parseInt(req.params.countryId);
+    const countryData = req.body;
+
+    const updatedCountry = await prisma.country.update({
+        where: { id: countryId },
+        data: {
+            name: countryData.name || undefined,
+            description: countryData.description || undefined,
+            imgUrl: countryData.imgUrl || undefined
+        }
+    });
+
+    res.send({ success: "Updated " + updatedCountry.name });
+
+});
+
 app.delete('/delete-country/:countryId', async (req, res) => {
 
     const countryId = parseInt(req.params.countryId);
