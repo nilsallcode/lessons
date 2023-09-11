@@ -15,14 +15,16 @@ function App() {
   }
 
   const getPictures = async () => {
-
     try {
       const response = await axios.get("http://localhost:4000/api/get-pictures");
-      setPictures(response.data.pictures);
+
+      if (response.data.pictures) {
+        setPictures(response.data.pictures);
+      }
+
     } catch (error) {
       setError("Something went wrong fetching the pictures.");
     }
-
   };
 
   const uploadPicture = async () => {
@@ -39,8 +41,8 @@ function App() {
       });
 
       if (response.data.success) {
-        setSuccess(response.data.success);
         getPictures();
+        setSuccess(response.data.success);
       } else if (response.data.error) {
         setError(response.data.error); 
       }
@@ -52,13 +54,9 @@ function App() {
 
   };
 
-  
-
   useEffect(() => {
-
     getPictures();
-
-  }, [pictures]);
+  }, []);
 
   return (
     <>
@@ -77,7 +75,7 @@ function App() {
         </div>
         <div className="grid grid-cols-3 gap-6">
           {pictures.map((picture, index) => (
-            <img src={"http://localhost:4000" + picture.filePath} className="border-2 border-violet-600 object-cover w-full h-[20rem]" key={index} />
+            <img src={"http://localhost:4000" + picture.filePath} className="border-2 border-violet-600 object-cover w-full h-[20rem]" />
           ))}
         </div>
       </main>
